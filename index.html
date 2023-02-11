@@ -12,16 +12,38 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/tasks.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <script defer src="js/script.js"></script>
 </head>
 
 <body>
-<form class="js-form">
-    <input class="js-newTask">
-    <button>Dodaj zadanie</button>
-</form>
-<ul class="js-tasks"></ul>
+    <main class="container">
+        <header>
+            <h1>Lista zadań</h1>
+        </header>
+        <section class="section">
+            <h2 class="section__header">
+                Dodaj nowe zadanie
+            </h2>
+            <div class="section__body">
+                <form class="js-form form">
+                    <input class="form__input js-newTask" placeholder="Co jest do zrobienia?" autofocus>
+                    <button class="form__button">Dodaj zadanie</button>
+                </form>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="section__header">Lista zadań</h2>
+            <div class="section__body">
+                <ul class="js-tasks tasks"></ul>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

@@ -1,0 +1,54 @@
+.button__hideAll {
+    border: none;
+    padding-right: 20px;
+    color: hsl(180, 100%, 25%);
+    transition: 1s;
+    cursor: pointer;
+    background-color: white;
+}
+
+.button__hideAll:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.button__hideAll:active {
+    color: hsl(180, 100%, 40%);
+}
+
+.button__hideAll:disabled {
+    color: gray;
+    cursor: auto;
+}
+
+.button__makeAllDone {
+    border: none;
+    color: hsl(180, 100%, 25%);
+    transition: 1s;
+    cursor: pointer;
+    background-color: white;
+}
+
+.button__makeAllDone:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.button__makeAllDone:active {
+    color: hsl(180, 100%, 40%);
+}
+
+.button__makeAllDone:disabled {
+    color: gray;
+    cursor: auto;
+}
+
+@media(max-width:767px) {
+    .button__makeAllDone {
+        padding: 20px;
+        border-bottom: none;
+    }
+
+    .button__hideAll {
+        padding: 20px;
+        border-bottom: none;
+    }
+}

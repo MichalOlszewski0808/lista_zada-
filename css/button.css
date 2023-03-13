@@ -1,54 +1,29 @@
-.button__hideAll {
+.button__button {
     border: none;
-    padding-right: 20px;
+    margin: 0 0 0 20px;
     color: hsl(180, 100%, 25%);
-    transition: 1s;
+    transition: 0.5s;
     cursor: pointer;
-    background-color: white;
+    background: transparent;
 }
 
-.button__hideAll:hover {
+.button__button:hover {
     color: hsl(180, 100%, 35%);
 }
 
-.button__hideAll:active {
+.button__button:active {
     color: hsl(180, 100%, 40%);
 }
 
-.button__hideAll:disabled {
+.button__button:disabled {
     color: gray;
     cursor: auto;
 }
 
-.button__makeAllDone {
-    border: none;
-    color: hsl(180, 100%, 25%);
-    transition: 1s;
-    cursor: pointer;
-    background-color: white;
-}
-
-.button__makeAllDone:hover {
-    color: hsl(180, 100%, 35%);
-}
-
-.button__makeAllDone:active {
-    color: hsl(180, 100%, 40%);
-}
-
-.button__makeAllDone:disabled {
-    color: gray;
-    cursor: auto;
-}
 
 @media(max-width:767px) {
-    .button__makeAllDone {
-        padding: 20px;
-        border-bottom: none;
-    }
-
-    .button__hideAll {
-        padding: 20px;
-        border-bottom: none;
+    .button__button {
+       flex-basis: 100%;
+       margin: 10px;
     }
 }

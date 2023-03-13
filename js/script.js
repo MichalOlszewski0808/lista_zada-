@@ -18,10 +18,10 @@
     render();
   };
 
-  const toggleTaskDone = (tasks, taskIndex) => {
+  const toggleTaskDone = (taskIndex) => {
     tasks = [
       ...tasks.slice(0, taskIndex),
-      { ...tasks[taskIndex].done = !tasks[taskIndex].done },
+      { ...tasks[taskIndex], done: !tasks[taskIndex].done },
       ...tasks.slice(taskIndex + 1),
     ];
     render();
@@ -41,7 +41,7 @@
 
     toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
       toggleDoneButton.addEventListener("click", () => {
-        toggleTaskDone(tasks, taskIndex);
+        toggleTaskDone(taskIndex);
       });
     });
   };
@@ -56,7 +56,7 @@
     };
 
     if (allTasksDoneButton) {
-      allTasksDoneButton.addEventListener("click", allTaskDone);
+      allTasksDoneButton.addEventListener("click", allTasksDone);
     };
   };
 
@@ -89,11 +89,11 @@ tasks__button--remove js-remove">
     if (tasks.length !== 0) {
       HTMLButtonString += `
           <button 
-             class="js-hideAllDoneTasks button__hideAll" 
+             class="js-hideAllDoneTasks button__button" 
              ${tasks.some(({ done }) => done) ? "" : " disabled"}>
              ${hideDoneTask ? "Pokaż " : "Ukryj "}ukończone
           </button>
-          <button class="js-allTasksDone button__makeAllDone"
+          <button class="js-allTasksDone button__button"
              ${tasks.every(({ done }) => done) ? " disabled" : ""}>
              Ukończ wszystkie
           </button>
@@ -116,9 +116,9 @@ tasks__button--remove js-remove">
     render();
   };
 
-  const allTaskDone = () => {
-    tasks = tasks.map((tasks) => ({
-      ...tasks,
+  const allTasksDone = () => {
+    tasks = tasks.map((task) => ({
+      ...task,
       done: true,
     }));
     render();

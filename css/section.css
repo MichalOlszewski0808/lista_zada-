@@ -13,7 +13,9 @@
     padding: 20px;
     font-size: 20px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 2px solid gray;
 }
 
@@ -22,30 +24,13 @@
     font-size: 20px;
 }
 
-.section__header .section__title {
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 20px;
-}
-
 .section__buttons {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.section__header .section__buttons {
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media (max-width:767px) {
     .section__header {
-        grid-template-columns: 1fr;
-        border-bottom: none;
-    }
-
-    .section__buttons {
         grid-template-columns: 1fr;
     }
 }
